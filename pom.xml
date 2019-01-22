@@ -39,7 +39,7 @@
         <tag>nacos-all-0.5.0</tag>
     </scm>
 
-    <mailingLists>
+    <!--<mailingLists>
         <mailingList>
             <name>Development List</name>
             <subscribe>dev-nacos+subscribe@googlegroups.com</subscribe>
@@ -58,16 +58,16 @@
             <unsubscribe>commits-nacos+unsubscribe@googlegroups.com</unsubscribe>
             <post>commits-nacos@googlegroups.com</post>
         </mailingList>
-    </mailingLists>
+    </mailingLists>-->
 
-    <developers>
+    <!--<developers>
         <developer>
             <id>Alibaba Nacos</id>
             <name>Nacos</name>
             <url>http://nacos.io</url>
             <email>nacos_dev@linux.alibaba.com</email>
         </developer>
-    </developers>
+    </developers>-->
 
     <licenses>
         <license>
@@ -380,14 +380,16 @@
             </build>
 
             <distributionManagement>
-                <snapshotRepository>
-                    <id>sona</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-                </snapshotRepository>
                 <repository>
-                    <id>sona</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+                    <id>releases</id>
+                    <name>releases</name>
+                    <url>http://192.168.1.6:8080/nexus/content/repositories/releases/</url>
                 </repository>
+                <snapshotRepository>
+                    <id>snapshots</id>
+                    <name>snapshots</name>
+                    <url>http://192.168.1.6:8080/nexus/content/repositories/snapshots/</url>
+                </snapshotRepository>
             </distributionManagement>
 
         </profile>
@@ -428,7 +430,7 @@
             </properties>
         </profile>
     </profiles>
-    <reporting>
+    <!--<reporting>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -436,7 +438,7 @@
                 <version>3.0.4</version>
             </plugin>
         </plugins>
-    </reporting>
+    </reporting>-->
 
     <!-- 子模块管理 -->
     <modules>
